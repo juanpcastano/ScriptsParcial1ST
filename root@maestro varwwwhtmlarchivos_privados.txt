@@ -1,0 +1,1226 @@
+root@maestro:/etc/bind# host empresa.com 192.168.50.4
+Using domain server:
+Name: 192.168.50.4
+Address: 192.168.50.4#53
+Aliases:
+
+root@maestro:/etc/bind# host empresa.com 192.168.50.5
+Using domain server:
+Name: 192.168.50.5
+Address: 192.168.50.5#53
+Aliases:
+
+root@maestro:/etc/bind# apt-get install apache2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap
+  mime-support ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap
+  mime-support ssl-cert
+0 upgraded, 12 newly installed, 0 to remove and 78 not upgraded.
+Need to get 2,106 kB of archives.
+After this operation, 8,407 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1 amd64 1.7.0-8ubuntu0.22.04.1 [108 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4.22.04.2 [92.8 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4.22.04.2 [11.3 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4.22.04.2 [9,170 B]
+Get:5 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.12 [1,348 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.12 [165 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.12 [89.1 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3,696 B]
+Get:11 http://us.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.12 [97.9 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+Fetched 2,106 kB in 6s (379 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 44954 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.7.0-8ubuntu0.22.04.1_amd64.deb ...
+Unpacking libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../04-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../05-apache2-bin_2.4.52-1ubuntu4.12_amd64.deb ...
+Unpacking apache2-bin (2.4.52-1ubuntu4.12) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../06-apache2-data_2.4.52-1ubuntu4.12_all.deb ...
+Unpacking apache2-data (2.4.52-1ubuntu4.12) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../07-apache2-utils_2.4.52-1ubuntu4.12_amd64.deb ...
+Unpacking apache2-utils (2.4.52-1ubuntu4.12) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../08-mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../09-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../10-apache2_2.4.52-1ubuntu4.12_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.12) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../11-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Setting up libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Setting up ssl-cert (1.1.2) ...
+Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+Setting up apache2-data (2.4.52-1ubuntu4.12) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Setting up libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up mime-support (3.66) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up apache2-utils (2.4.52-1ubuntu4.12) ...
+Setting up apache2-bin (2.4.52-1ubuntu4.12) ...
+Setting up apache2 (2.4.52-1ubuntu4.12) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/etc/bind# cd /etc/apache2/sites-available
+root@maestro:/etc/apache2/sites-available# ls
+000-default.conf  default-ssl.conf
+root@maestro:/etc/apache2/sites-available# vim 000-default.conf
+
+root@maestro:/etc/apache2/sites-available# sudo a2enmod auth_basic
+sudo a2enmod authnz_external
+sudo a2enmod authnz_pam
+sudo systemctl restart apache2
+Considering dependency authn_core for auth_basic:
+Module authn_core already enabled
+Module auth_basic already enabled
+ERROR: Module authnz_external does not exist!
+ERROR: Module authnz_pam does not exist!
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+root@maestro:/etc/apache2/sites-available# sudo a2enmod auth_basic
+Considering dependency authn_core for auth_basic:
+Module authn_core already enabled
+Module auth_basic already enabled
+root@maestro:/etc/apache2/sites-available# sudo a2enmod authnz_external
+ERROR: Module authnz_external does not exist!
+root@maestro:/etc/apache2/sites-available# sudo apt-get install libapache2-mod-authnz-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  libapache2-mod-authnz-pam
+0 upgraded, 1 newly installed, 0 to remove and 78 not upgraded.
+Need to get 8,752 B of archives.
+After this operation, 37.9 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 libapache2-mod-authnz-pam amd64 1.2.1-1 [8,752 B]
+Fetched 8,752 B in 5s (1,943 B/s)
+Selecting previously unselected package libapache2-mod-authnz-pam.
+(Reading database ... 45696 files and directories currently installed.)
+Preparing to unpack .../libapache2-mod-authnz-pam_1.2.1-1_amd64.deb ...
+Unpacking libapache2-mod-authnz-pam (1.2.1-1) ...
+Setting up libapache2-mod-authnz-pam (1.2.1-1) ...
+apache2_invoke: Enable module authnz_pam
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/etc/apache2/sites-available# sudo a2enmod authnz_external
+ERROR: Module authnz_external does not exist!
+root@maestro:/etc/apache2/sites-available# sudo a2enmod authnz_external
+ERROR: Module authnz_external does not exist!
+root@maestro:/etc/apache2/sites-available# sudo systemctl restart apache2
+root@maestro:/etc/apache2/sites-available# sudo a2enmod authnz_external
+ERROR: Module authnz_external does not exist!
+root@maestro:/etc/apache2/sites-available# a2dismod authnz-external
+ERROR: Module authnz-external does not exist!
+root@maestro:/etc/apache2/sites-available# apt-get install libapache2-mod-authnz-external
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  pwauth
+The following NEW packages will be installed:
+  libapache2-mod-authnz-external pwauth
+0 upgraded, 2 newly installed, 0 to remove and 78 not upgraded.
+Need to get 29.8 kB of archives.
+After this operation, 102 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 libapache2-mod-authnz-external amd64 3.3.2-0.2 [20.0 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 pwauth amd64 2.3.11-5 [9,806 B]
+Fetched 29.8 kB in 5s (6,227 B/s)
+Selecting previously unselected package libapache2-mod-authnz-external.
+(Reading database ... 45703 files and directories currently installed.)
+Preparing to unpack .../libapache2-mod-authnz-external_3.3.2-0.2_amd64.deb ...
+Unpacking libapache2-mod-authnz-external (3.3.2-0.2) ...
+Selecting previously unselected package pwauth.
+Preparing to unpack .../pwauth_2.3.11-5_amd64.deb ...
+Unpacking pwauth (2.3.11-5) ...
+Setting up libapache2-mod-authnz-external (3.3.2-0.2) ...
+apache2_invoke: Enable module authnz_external
+Setting up pwauth (2.3.11-5) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/etc/apache2/sites-available# a2enmod authnz-external
+ERROR: Module authnz-external does not exist!
+root@maestro:/etc/apache2/sites-available# sudo apt-get install libapache2-mod-authnz-external libapache2-mod-authnz-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+libapache2-mod-authnz-external is already the newest version (3.3.2-0.2).
+libapache2-mod-authnz-pam is already the newest version (1.2.1-1).
+0 upgraded, 0 newly installed, 0 to remove and 78 not upgraded.
+root@maestro:/etc/apache2/sites-available# sudo a2enmod authnz_external authnz_pam
+Module authnz_external already enabled
+Module authnz_pam already enabled
+root@maestro:/etc/apache2/sites-available# sudo systemctl restart apache2
+root@maestro:/etc/apache2/sites-available# vim /etc/pam.d/apache
+root@maestro:/etc/apache2/sites-available# cd /etc/pam.d/apache
+-bash: cd: /etc/pam.d/apache: Not a directory
+root@maestro:/etc/apache2/sites-available# cd /etc/
+root@maestro:/etc# ls
+adduser.conf            dhcp             issue.net       modprobe.d           profile.d     subuid-
+alternatives            dkms             kernel          modules              protocols     sudo.conf
+apache2                 dpkg             landscape       modules-load.d       python3       sudoers
+apparmor                e2scrub.conf     ldap            mtab                 python3.10    sudoers.d
+apparmor.d              environment      ld.so.cache     multipath            rc0.d         sudo_logsrvd.conf
+apport                  ethertypes       ld.so.conf      multipath.conf       rc1.d         sysctl.conf
+apt                     fonts            ld.so.conf.d    nanorc               rc2.d         sysctl.d
+bash.bashrc             fstab            legal           needrestart          rc3.d         systemd
+bash_completion.d       fuse.conf        libaudit.conf   netconfig            rc4.d         terminfo
+bind                    fwupd            libblockdev     netplan              rc5.d         thermald
+bindresvport.blacklist  gai.conf         libnl-3         network              rc6.d         timezone
+binfmt.d                groff            locale.alias    networkd-dispatcher  rcS.d         tmpfiles.d
+byobu                   group            locale.gen      networks             resolv.conf   ubuntu-advantage
+ca-certificates         group-           localtime       newt                 rmt           ucf.conf
+ca-certificates.conf    grub.d           logcheck        nftables.conf        rpc           udev
+cloud                   gshadow          login.defs      nsswitch.conf        rsyslog.conf  udisks2
+console-setup           gshadow-         logrotate.conf  opt                  rsyslog.d     ufw
+cron.d                  gss              logrotate.d     os-release           screenrc      update-manager
+cron.daily              hdparm.conf      lsb-release     overlayroot.conf     security      update-motd.d
+cron.hourly             host.conf        lvm             PackageKit           selinux       UPower
+cron.monthly            hostname         machine-id      pam.conf             services      usb_modeswitch.conf
+crontab                 hosts            magic           pam.d                shadow        usb_modeswitch.d
+cron.weekly             hosts.allow      magic.mime      passwd               shadow-       vim
+cryptsetup-initramfs    hosts.deny       mailcap         passwd-              shells        vmware-tools
+crypttab                init.d           mailcap.order   perl                 skel          vtrgb
+dbus-1                  initramfs-tools  mailname        pki                  sos           wgetrc
+debconf.conf            inputrc          manpath.config  pm                   ssh           X11
+debian_version          insserv.conf.d   mdadm           polkit-1             ssl           xattr.conf
+default                 iproute2         mime.types      pollinate            subgid        xdg
+deluser.conf            iscsi            mke2fs.conf     ppp                  subgid-
+depmod.d                issue            ModemManager    profile              subuid
+root@maestro:/etc# cd /etc/pam.d
+root@maestro:/etc/pam.d# ls
+apache    chsh            common-password                cron      other     pwauth     sshd  sudo-i
+chfn      common-account  common-session                 login     passwd    runuser    su    su-l
+chpasswd  common-auth     common-session-noninteractive  newusers  polkit-1  runuser-l  sudo  vmtoolsd
+root@maestro:/etc/pam.d# vim apache
+root@maestro:/etc/pam.d# systemctl restart apache2
+root@maestro:/etc/pam.d# cd /var/www/
+root@maestro:/var/www# ls
+html
+root@maestro:/var/www# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www# cd /var/www/html/
+root@maestro:/var/www/html# ls
+index.html
+root@maestro:/var/www/html# mkdir archivos_privados
+root@maestro:/var/www/html# cd /vagrant/
+root@maestro:/vagrant# ls
+icontec.html  Vagrantfile
+root@maestro:/vagrant# cd /var/www/html/
+root@maestro:/var/www/html# cd archivos_privados/
+root@maestro:/var/www/html/archivos_privados# cp /vagrant/icontec.html pwd
+root@maestro:/var/www/html/archivos_privados# ls
+pwd
+root@maestro:/var/www/html/archivos_privados# ls pwq
+ls: cannot access 'pwq': No such file or directory
+root@maestro:/var/www/html/archivos_privados# mv pwd index.html
+root@maestro:/var/www/html/archivos_privados# ls
+index.html
+root@maestro:/var/www/html/archivos_privados# cat index.html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>¿Qué son las Normas ICONTEC?</title>
+    <style>
+        body div {
+            margin: 30px;
+
+            background-color: #f0f8ff;
+            border-radius: 15px;
+            color: #4622aa;
+            font-family: Arial, sans-serif;
+            display: grid;
+            padding: 20px;
+        }
+
+        body {
+            background-color: #c2c8ff;
+
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #004080;
+            justify-self: center;
+        }
+
+        h2 {
+            justify-self: center;
+            color: #0066cc;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            justify-self: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #004080;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .comparison-table {
+            width: 100%;
+        }
+
+        img {
+            justify-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Normas ICONTEC</h1>
+        <p>Las normas ICONTEC son un conjunto de directrices desarrolladas por el Instituto Colombiano de Normas
+            Técnicas y Certificación (ICONTEC) para estandarizar la presentación de trabajos escritos, como tesis,
+            informes, proyectos, y otros documentos académicos y profesionales en Colombia. Estas normas aseguran que
+            los documentos tengan un formato coherente y profesional.
+            además, icontec es una norma de presentación de tesis, informe, proyecto, etc, avalada, o mas bien dicho,
+            perteneciente a la organización internacional de normalización (ISO).</p>
+
+        <h2>Principios Básicos</h2>
+        <p>Los principios de las normas ICONTEC abarcan desde la estructura de la portada hasta el formato de las
+            referencias bibliográficas. Algunos de los aspectos clave incluyen:</p>
+
+        <ul>
+            <li><strong>Formato de la portada:</strong> Debe incluir el título del trabajo, nombre del autor, nombre de
+                la institución, ciudad y año.</li>
+            <li><strong>Márgenes:</strong> Márgenes estandarizados para garantizar una buena presentación.</li>
+            <li><strong>Numeración:</strong> Las páginas se numeran desde la introducción, utilizando números arábigos.
+            </li>
+            <li><strong>Tipo de letra:</strong> Arial o Times New Roman en tamaño 12.</li>
+        </ul>
+
+        <h2>Estructura de un Trabajo</h2>
+        <p>Un documento que sigue las normas ICONTEC típicamente incluye los siguientes elementos:</p>
+
+        <table>
+            <tr>
+                <th>Elemento</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Portada</td>
+                <td>Incluye el título, autor, institución, y otros detalles importantes.</td>
+            </tr>
+            <tr>
+                <td>Introducción</td>
+                <td>Presenta el tema y objetivos del trabajo.</td>
+            </tr>
+            <tr>
+                <td>Desarrollo</td>
+                <td>Contiene el contenido principal, dividido en secciones y subsecciones.</td>
+            </tr>
+            <tr>
+                <td>Conclusión</td>
+                <td>Resume los hallazgos y sugiere posibles investigaciones futuras.</td>
+            </tr>
+            <tr>
+                <td>Referencias Bibliográficas</td>
+                <td>Lista de fuentes utilizadas, formateadas según ICONTEC.</td>
+            </tr>
+        </table>
+
+        <h2>Comparación con otros estándares</h2>
+        <p>A continuación se presenta una comparación entre las normas ICONTEC y otro estándar comúnmente utilizado,
+            como el formato APA:</p>
+
+        <table>
+            <tr>
+                <th>Criterio</th>
+                <th>Normas ICONTEC</th>
+                <th>Formato APA</th>
+                <th>Formato MLA</th>
+                <th>Formato Chicago</th>
+            </tr>
+            <tr>
+                <td>Portada</td>
+                <td>Incluye título, autor, institución, ciudad, año.</td>
+                <td>Incluye título, autor, institución, fecha.</td>
+                <td>No se requiere portada. Información en la primera página.</td>
+                <td>Incluye título, autor, curso, fecha.</td>
+            </tr>
+            <tr>
+                <td>Numeración</td>
+                <td>Números arábigos desde la introducción.</td>
+                <td>Números arábigos desde la primera página.</td>
+                <td>Números arábigos en la esquina superior derecha.</td>
+                <td>Números arábigos, a partir de la primera página del texto.</td>
+            </tr>
+            <tr>
+                <td>Interlineado</td>
+                <td>Sencillo o 1.5 líneas.</td>
+                <td>Doble espacio.</td>
+                <td>Doble espacio.</td>
+                <td>Doble espacio.</td>
+            </tr>
+            <tr>
+                <td>Referencias</td>
+                <td>Al final del documento, formato ICONTEC.</td>
+                <td>Al final del documento, formato APA (Apellido, Año).</td>
+                <td>Al final del documento, formato MLA (Apellido, página).</td>
+                <td>Notas al pie y bibliografía al final.</td>
+            </tr>
+            <tr>
+                <td>Márgenes</td>
+                <td>Superior: 3 cm, Inferior: 3 cm, Izquierdo: 4 cm, Derecho: 2 cm.</td>
+                <td>1 pulgada (2.54 cm) en todos los lados.</td>
+                <td>1 pulgada (2.54 cm) en todos los lados.</td>
+                <td>1 pulgada (2.54 cm) en todos los lados.</td>
+            </tr>
+            <tr>
+                <td>Tipo de Letra</td>
+                <td>Arial o Times New Roman, 12 pt.</td>
+                <td>Times New Roman, 12 pt.</td>
+                <td>Times New Roman, 12 pt.</td>
+                <td>Times New Roman, 12 pt.</td>
+            </tr>
+            <tr>
+                <td>Citas dentro del texto</td>
+                <td>Apellido, Año, página.</td>
+                <td>Apellido, Año, página.</td>
+                <td>Apellido, página.</td>
+                <td>Notas al pie o paréntesis (Apellido, Año, página).</td>
+            </tr>
+            <tr>
+                <td>Títulos y Subtítulos</td>
+                <td>En negrita, numerados.</td>
+                <td>En negrita, centrados o alineados a la izquierda.</td>
+                <td>En cursiva, sin numerar.</td>
+                <td>En negrita, centrados o alineados a la izquierda.</td>
+            </tr>
+        </table>
+        <h2>Ejemplo de Portada</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/margenes.png" alt="Ejemplo de Portada"
+            width="400px">
+        <h2>Ejemplo de contenido</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/contenido.jpg" alt="Ejemplo de contenido"
+            width="400px">
+        <h2>Ejemplo de lista en portada</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/figuras.jpg" alt="Ejemplo de listas en portada"
+            width="400px">
+        <h2>Ejemplo de glosario</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/glosario.jpg" alt="Ejemplo de Glosario"
+            width="400px">
+        <h1>Texto Y Cuerpo</h1>
+        <h2>Ejemplo de introduccion</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/introduccion.jpg" alt="Ejemplo de introducción"
+            width="400px">
+            <h2>Ejemplo de conclusiones</h2>
+        <img src="https://normasicontec.co/wp-content/uploads/2018/09/conclusiones.jpg" alt="Ejemplo de conclusiones"
+            width="400px">
+
+        <h1>Importancia de las Normas ICONTEC</h1>
+        <p>Las normas ICONTEC son fundamentales en el ámbito académico y profesional en Colombia. Su uso promueve la
+            uniformidad y facilita la lectura y comprensión de los documentos. Además, son ampliamente reconocidas y
+            aplicadas en diversas instituciones educativas y organizaciones.
+            la importancia de icontec se puede catalogar en los siguientes puntos:</p>
+        <ul>
+            <li><strong>Uniformidad y Consistencia:</strong> Las normas ICONTEC proporcionan un formato estándar para la
+                presentación de trabajos escritos, lo que facilita la lectura y comprensión al mantener una estructura
+                coherente.</li>
+            <li><strong>Calidad y Profesionalismo:</strong> El uso de estas normas asegura que los documentos cumplan
+                con estándares de calidad, lo que refleja un nivel de profesionalismo y rigor académico o empresarial.
+            </li>
+            <li><strong>Facilita la Evaluación:</strong> Para instituciones educativas y empresas, las normas ICONTEC
+                permiten evaluar documentos de manera más eficiente, ya que siguen un formato preestablecido y conocido.
+            </li>
+            <li><strong>Credibilidad y Confianza:</strong> Al seguir estas normas, los autores demuestran que sus
+                trabajos están bien fundamentados y cumplen con criterios reconocidos, lo que aumenta la credibilidad de
+                sus investigaciones o propuestas.</li>
+            <li><strong>Organización y Claridad:</strong> Las normas ayudan a estructurar la información de manera clara
+                y ordenada, facilitando la comunicación efectiva de ideas, hallazgos y argumentos.</li>
+            <li><strong>Adaptabilidad:</strong> Aunque están diseñadas en Colombia, las normas ICONTEC pueden ser
+                adaptadas en otros contextos, lo que facilita la estandarización de documentos en diferentes ámbitos.
+            </li>
+        </ul>
+        <p>Para más detalles y ejemplos, visita la <a href="https://normasicontec.co/" target="_blank">página
+                oficial</a>.</p>
+    </div>
+</body>
+
+</html>root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/
+apache2.conf     conf-enabled/    magic            mods-enabled/    sites-available/
+conf-available/  envvars          mods-available/  ports.conf       sites-enabled/
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# sudo apt-get install pwauth
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+pwauth is already the newest version (2.3.11-5).
+pwauth set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 78 not upgraded.
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# vim /var/www/html/index.html
+root@maestro:/var/www/html/archivos_privados# vim /var/www/html/archivos_privados/index.html
+root@maestro:/var/www/html/archivos_privados# vim /etc/pa
+pam.conf  pam.d/    passwd    passwd-
+root@maestro:/var/www/html/archivos_privados# vim /etc/pam.d/apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/denied_users
+root@maestro:/var/www/html/archivos_privados# systemctl restart apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# vim /etc/pam.d/apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# vim /etc/bind/db.empresa.com
+root@maestro:/var/www/html/archivos_privados# systemctl restart bind9
+root@maestro:/var/www/html/archivos_privados# host empresa.com
+^Croot@maestro:/var/www/html/archivos_privados# host empresa.com 192.168.50.5
+Using domain server:
+Name: 192.168.50.5
+Address: 192.168.50.5#53
+Aliases:
+
+root@maestro:/var/www/html/archivos_privados# vim /etc/pam.d/apache2
+root@maestro:/var/www/html/archivos_privados# systemctl restart apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# vim /etc/pam.d/apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/denied_users
+root@maestro:/var/www/html/archivos_privados# ls /etc/apache2/
+apache2.conf    conf-enabled  envvars  mods-available  ports.conf       sites-enabled
+conf-available  denied_users  magic    mods-enabled    sites-available
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# apt-get install apache2 libapache2-mod-auth-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libapache2-mod-auth-pam
+root@maestro:/var/www/html/archivos_privados# apt-get install apache2 libapache2-mod-auth-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libapache2-mod-auth-pam
+root@maestro:/var/www/html/archivos_privados# apt-get install libapache2-mod-auth-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libapache2-mod-auth-pam
+root@maestro:/var/www/html/archivos_privados# apt-get install libapache-mod-auth-pam
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package libapache-mod-auth-pam
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# systemctl restart apache2
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# adduser
+adduser: Only one or two names allowed.
+root@maestro:/var/www/html/archivos_privados# adduser usuarioAdmitido1
+adduser: Please enter a username matching the regular expression configured
+via the NAME_REGEX[_SYSTEM] configuration variable.  Use the `--force-badname'
+option to relax this check or reconfigure NAME_REGEX.
+root@maestro:/var/www/html/archivos_privados# adduser usuarioAdmitidoUno
+adduser: Please enter a username matching the regular expression configured
+via the NAME_REGEX[_SYSTEM] configuration variable.  Use the `--force-badname'
+option to relax this check or reconfigure NAME_REGEX.
+root@maestro:/var/www/html/archivos_privados# adduser UsuarioAdmitido1
+adduser: Please enter a username matching the regular expression configured
+via the NAME_REGEX[_SYSTEM] configuration variable.  Use the `--force-badname'
+option to relax this check or reconfigure NAME_REGEX.
+root@maestro:/var/www/html/archivos_privados# adduser "UsuarioAdmitido1"
+adduser: Please enter a username matching the regular expression configured
+via the NAME_REGEX[_SYSTEM] configuration variable.  Use the `--force-badname'
+option to relax this check or reconfigure NAME_REGEX.
+root@maestro:/var/www/html/archivos_privados# adduser usuarioadmitido1
+Adding user `usuarioadmitido1' ...
+Adding new group `usuarioadmitido1' (1001) ...
+Adding new user `usuarioadmitido1' (1001) with group `usuarioadmitido1' ...
+Creating home directory `/home/usuarioadmitido1' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+No password has been supplied.
+New password:
+Retype new password:
+No password has been supplied.
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuarioadmitido1
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# adduser usuarioadmitido2
+Adding user `usuarioadmitido2' ...
+Adding new group `usuarioadmitido2' (1002) ...
+Adding new user `usuarioadmitido2' (1002) with group `usuarioadmitido2' ...
+Creating home directory `/home/usuarioadmitido2' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] y
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuarioadmitido2
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# adduser usuarioadmitido3
+Adding user `usuarioadmitido3' ...
+Adding new group `usuarioadmitido3' (1003) ...
+Adding new user `usuarioadmitido3' (1003) with group `usuarioadmitido3' ...
+Creating home directory `/home/usuarioadmitido3' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuarioadmitido3
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# adduser usuariodenegado1
+Adding user `usuariodenegado1' ...
+Adding new group `usuariodenegado1' (1004) ...
+Adding new user `usuariodenegado1' (1004) with group `usuariodenegado1' ...
+Creating home directory `/home/usuariodenegado1' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuariodenegado1
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# adduser usuariodenegado2
+Adding user `usuariodenegado2' ...
+Adding new group `usuariodenegado2' (1005) ...
+Adding new user `usuariodenegado2' (1005) with group `usuariodenegado2' ...
+Creating home directory `/home/usuariodenegado2' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuariodenegado2
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# adduser usuariodenegado3
+Adding user `usuariodenegado3' ...
+Adding new group `usuariodenegado3' (1006) ...
+Adding new user `usuariodenegado3' (1006) with group `usuariodenegado3' ...
+Creating home directory `/home/usuariodenegado3' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for usuariodenegado3
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] Y
+root@maestro:/var/www/html/archivos_privados# vim /etc/apache2/sites-available/000-default.conf
+root@maestro:/var/www/html/archivos_privados# systemctl restart apache2
+root@maestro:/var/www/html/archivos_privados# sudo tail -f /var/log/apache2/error.log
+[Tue Aug 27 22:48:55.924828 2024] [core:notice] [pid 5456:tid 139984222017408] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Aug 27 22:49:24.355962 2024] [authnz_pam:warn] [pid 5458:tid 139984202421824] [client 192.168.50.1:62932] PAM authentication failed for user vagrant: Authentication service cannot retrieve authentication info
+[Tue Aug 27 22:49:24.356856 2024] [auth_basic:error] [pid 5458:tid 139984202421824] [client 192.168.50.1:62932] AH01617: user vagrant: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:54:36.811730 2024] [authnz_pam:warn] [pid 5458:tid 139984099067456] [client 192.168.50.1:51100] PAM authentication failed for user usuarioAdmitido1: User not known to the underlying authentication module
+[Tue Aug 27 22:54:36.812286 2024] [auth_basic:error] [pid 5458:tid 139984099067456] [client 192.168.50.1:51100] AH01617: user usuarioAdmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:55:22.555355 2024] [mpm_event:notice] [pid 5456:tid 139984222017408] AH00492: caught SIGWINCH, shutting down gracefully
+[Tue Aug 27 22:55:22.660717 2024] [mpm_event:notice] [pid 5689:tid 139622137444224] AH00489: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Tue Aug 27 22:55:22.660897 2024] [core:notice] [pid 5689:tid 139622137444224] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Aug 27 22:55:33.495135 2024] [authnz_pam:warn] [pid 5691:tid 139621828634176] [client 192.168.50.1:51790] PAM authentication failed for user usuarioadmitido1: Authentication service cannot retrieve authentication info
+[Tue Aug 27 22:55:33.495807 2024] [auth_basic:error] [pid 5691:tid 139621828634176] [client 192.168.50.1:51790] AH01617: user usuarioadmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:56:59.572261 2024] [authnz_pam:warn] [pid 5691:tid 139621988030016] [client 192.168.50.1:52829] PAM authentication failed for user usuarioAdmitido1: User not known to the underlying authentication module
+[Tue Aug 27 22:56:59.573015 2024] [auth_basic:error] [pid 5691:tid 139621988030016] [client 192.168.50.1:52829] AH01617: user usuarioAdmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+sudo getent passwd usuarioAdmitido1^[
+:wq
+^C
+root@maestro:/var/www/html/archivos_privados# sudo getent passwd usuarioAdmitido1
+root@maestro:/var/www/html/archivos_privados# sudo getent passwd usuarioAdmitido1
+root@maestro:/var/www/html/archivos_privados# sudo tail -f /var/log/apache2/error.log
+[Tue Aug 27 22:54:36.812286 2024] [auth_basic:error] [pid 5458:tid 139984099067456] [client 192.168.50.1:51100] AH01617: user usuarioAdmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:55:22.555355 2024] [mpm_event:notice] [pid 5456:tid 139984222017408] AH00492: caught SIGWINCH, shutting down gracefully
+[Tue Aug 27 22:55:22.660717 2024] [mpm_event:notice] [pid 5689:tid 139622137444224] AH00489: Apache/2.4.52 (Ubuntu) configured -- resuming normal operations
+[Tue Aug 27 22:55:22.660897 2024] [core:notice] [pid 5689:tid 139622137444224] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Aug 27 22:55:33.495135 2024] [authnz_pam:warn] [pid 5691:tid 139621828634176] [client 192.168.50.1:51790] PAM authentication failed for user usuarioadmitido1: Authentication service cannot retrieve authentication info
+[Tue Aug 27 22:55:33.495807 2024] [auth_basic:error] [pid 5691:tid 139621828634176] [client 192.168.50.1:51790] AH01617: user usuarioadmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:56:59.572261 2024] [authnz_pam:warn] [pid 5691:tid 139621988030016] [client 192.168.50.1:52829] PAM authentication failed for user usuarioAdmitido1: User not known to the underlying authentication module
+[Tue Aug 27 22:56:59.573015 2024] [auth_basic:error] [pid 5691:tid 139621988030016] [client 192.168.50.1:52829] AH01617: user usuarioAdmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+[Tue Aug 27 22:58:05.407712 2024] [authnz_pam:warn] [pid 5690:tid 139622117848640] [client 192.168.50.1:53643] PAM authentication failed for user usuarioAdmitido1: User not known to the underlying authentication module
+[Tue Aug 27 22:58:05.408808 2024] [auth_basic:error] [pid 5690:tid 139622117848640] [client 192.168.50.1:53643] AH01617: user usuarioAdmitido1: authentication failure for "/archivos_privados/": Password Mismatch
+^C
+root@maestro:/var/www/html/archivos_privados# sudo chown root:root /etc/pam.d/apache
+root@maestro:/var/www/html/archivos_privados# sudo chmod 644 /etc/pam.d/apache
+root@maestro:/var/www/html/archivos_privados# sudo a2enmod authnz_pam
+Module authnz_pam already enabled
+root@maestro:/var/www/html/archivos_privados# sudo systemctl restart apache2
+root@maestro:/var/www/html/archivos_privados# sudo cat /etc/passwd | grep nombre_usuario
+root@maestro:/var/www/html/archivos_privados# sudo cat /etc/passwd | grep usuarioAdmitido1
+root@maestro:/var/www/html/archivos_privados# ls /user
+ls: cannot access '/user': No such file or directory
+root@maestro:/var/www/html/archivos_privados# systemctl status apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+ ESCOD
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOC
+
+ vendor preset: enabled)
+min ago
+
+, status=0/SUCCESS)
+
+
+
+
+
+
+
+
+
+r...
+ot reliably determine the server's fully qualified domain name, using 127.0.2.1. Set the 'ServerName' directive globally to suppress>
+.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOC
+
+ vendor preset: enabled)
+min ago
+
+, status=0/SUCCESS)
+
+
+
+
+
+
+
+
+
+r...
+ot reliably determine the server's fully qualified domain name, using 127.0.2.1. Set the 'ServerName' directive globally to suppress>
+.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOC
+
+ vendor preset: enabled)
+min ago
+
+, status=0/SUCCESS)
+
+
+
+
+
+
+
+
+
+r...
+ot reliably determine the server's fully qualified domain name, using 127.0.2.1. Set the 'ServerName' directive globally to suppress>
+.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+ ESCOD
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2024-08-27 22:58:36 UTC; 8min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5782 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5787 (apache2)
+      Tasks: 55 (limit: 2219)
+     Memory: 5.0M
+        CPU: 162ms
+     CGroup: /system.slice/apache2.service
+             ├─5787 /usr/sbin/apache2 -k start
+             ├─5788 /usr/sbin/apache2 -k start
+             └─5789 /usr/sbin/apache2 -k start
+
+Aug 27 22:58:36 maestro systemd[1]: Starting The Apache HTTP Server...
+Aug 27 22:58:36 maestro apachectl[5785]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, us>
+Aug 27 22:58:36 maestro systemd[1]: Started The Apache HTTP Server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+root@maestro:/var/www/html/archivos_privados#
+apt-get install ngrok
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package ngrok
+root@maestro:/var/www/html/archivos_privados# apt-get install snap
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  snap
+0 upgraded, 1 newly installed, 0 to remove and 78 not upgraded.
+Need to get 377 kB of archives.
+After this operation, 2,756 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Fetched 377 kB in 7s (51.3 kB/s)
+Selecting previously unselected package snap.
+(Reading database ... 45720 files and directories currently installed.)
+Preparing to unpack .../snap_2013-11-29-11_amd64.deb ...
+Unpacking snap (2013-11-29-11) ...
+Setting up snap (2013-11-29-11) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/var/www/html/archivos_privados# snap install ngrok
+ngrok (v3/stable) 3.14.1 from Kyle Wenholz (kyle-ngrok) installed
+root@maestro:/var/www/html/archivos_privados# ngrok config add-authtoken 2lGJ05KHybb2NwTFXwsC40d2Rvn_3roASZS9ZYExZNHJn2Lbx
+Authtoken saved to configuration file: /root/snap/ngrok/184/.config/ngrok/ngrok.yml
+root@maestro:/var/www/html/archivos_privados# ngrok http http://localhost:8080
+root@maestro:/var/www/html/archivos_privados# apt-get install snap
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  snap
+0 upgraded, 1 newly installed, 0 to remove and 78 not upgraded.
+Need to get 377 kB of archives.
+After this operation, 2,756 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Fetched 377 kB in 7s (51.3 kB/s)
+Selecting previously unselected package snap.
+(Reading database ... 45720 files and directories currently installed.)
+Preparing to unpack .../snap_2013-11-29-11_amd64.deb ...
+Unpacking snap (2013-11-29-11) ...
+Setting up snap (2013-11-29-11) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/var/www/html/archivos_privados# snap install ngrok
+ngrok (v3/stable) 3.14.1 from Kyle Wenholz (kyle-ngrok) installed
+root@maestro:/var/www/html/archivos_privados# ngrok config add-authtoken 2lGJ05KHybb2NwTFXwsC40d2Rvn_3roASZS9ZYExZNHJn2Lbx
+Authtoken saved to configuration file: /root/snap/ngrok/184/.config/ngrok/ngrok.yml
+root@maestro:/var/www/html/archivos_privados# ngrok http http://localhost:8080
+root@maestro:/var/www/html/archivos_privados# ngrok http http://192.168.50.5:8080
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  snap
+0 upgraded, 1 newly installed, 0 to remove and 78 not upgraded.
+Need to get 377 kB of archives.
+After this operation, 2,756 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Fetched 377 kB in 7s (51.3 kB/s)
+Selecting previously unselected package snap.
+(Reading database ... 45720 files and directories currently installed.)
+Preparing to unpack .../snap_2013-11-29-11_amd64.deb ...
+Unpacking snap (2013-11-29-11) ...
+Setting up snap (2013-11-29-11) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/var/www/html/archivos_privados# snap install ngrok
+ngrok (v3/stable) 3.14.1 from Kyle Wenholz (kyle-ngrok) installed
+root@maestro:/var/www/html/archivos_privados# ngrok config add-authtoken 2lGJ05KHybb2NwTFXwsC40d2Rvn_3roASZS9ZYExZNHJn2Lbx
+Authtoken saved to configuration file: /root/snap/ngrok/184/.config/ngrok/ngrok.yml
+root@maestro:/var/www/html/archivos_privados# ngrok http http://localhost:8080
+root@maestro:/var/www/html/archivos_privados# ngrok http http://192.168.50.5:8080
+root@maestro:/var/www/html/archivos_privados# ngrok http http://192.168.50.5:80
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  snap
+0 upgraded, 1 newly installed, 0 to remove and 78 not upgraded.
+Need to get 377 kB of archives.
+After this operation, 2,756 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu jammy/universe amd64 snap amd64 2013-11-29-11 [377 kB]
+Fetched 377 kB in 7s (51.3 kB/s)
+Selecting previously unselected package snap.
+(Reading database ... 45720 files and directories currently installed.)
+Preparing to unpack .../snap_2013-11-29-11_amd64.deb ...
+Unpacking snap (2013-11-29-11) ...
+Setting up snap (2013-11-29-11) ...
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@maestro:/var/www/html/archivos_privados# snap install ngrok
+ngrok (v3/stable) 3.14.1 from Kyle Wenholz (kyle-ngrok) installed
+root@maestro:/var/www/html/archivos_privados# ngrok config add-authtoken 2lGJ05KHybb2NwTFXwsC40d2Rvn_3roASZS9ZYExZNHJn2Lbx
+Authtoken saved to configuration file: /root/snap/ngrok/184/.config/ngrok/ngrok.yml
+root@maestro:/var/www/html/archivos_privados# ngrok http http://localhost:8080
+root@maestro:/var/www/html/archivos_privados# ngrok http http://192.168.50.5:8080
+root@maestro:/var/www/html/archivos_privados# ngrok http http://192.168.50.5:80
+root@maestro:/var/www/html/archivos_privados#
